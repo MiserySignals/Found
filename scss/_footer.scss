@@ -1,0 +1,85 @@
+.footer {
+   background-color: #EEEEEE;
+   @include adaptiveValue("padding-top", 100, 40);
+   @include adaptiveValue("padding-bottom", 100, 40);
+
+   &__container {}
+
+   &__content {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+
+      @media (max-width:$mobile) {
+         flex-direction: column;
+      }
+   }
+
+   &__logos {
+      display: flex;
+      flex-direction: column;
+      @include adaptiveValue("gap", 35, 15);
+   }
+
+   &__logo {
+      img {
+         max-width: 100%;
+      }
+   }
+
+   &__items {
+      display: grid;
+      justify-content: center;
+      grid-template-columns: repeat(3, 1fr);
+      @include adaptiveValue("gap", 180, 35);
+      @media (max-width:$mobile) {
+         gap: 30px;
+         grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      }
+      @media (max-width:$mobileSmall) {
+         grid-template-columns: 1fr;
+      }
+   }
+}
+
+.footer-item {
+
+   &__head {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 18.88px;
+      color: $mainColor;
+      margin-bottom: toRem(13);
+      text-transform: uppercase;
+   }
+
+   &__content {
+      display: flex;
+      @include adaptiveValue("gap", 20, 10);
+      flex-direction: column;
+   }
+
+   &__text {
+      display: flex;
+      flex-direction: column;
+      max-width: 230px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+   }
+
+   &__phone {
+      font-weight: 500;
+   }
+
+   &__mail {
+      color: $blueColor;
+      font-weight: 400;
+   }
+
+   .footer-item__phone,
+   .footer-item__mail {
+      font-size: 16px;
+      line-height: 18.88px;
+   }
+}

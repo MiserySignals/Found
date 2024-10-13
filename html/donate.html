@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../scss/base.css">
+   <title>Сделать вклад</title>
+</head>
+<body>
+   <div class="wrapper">
+      <header class="header">
+         <div class="header__container">
+            <a href="../index.html" class="header__logo">
+               <img src="../img/common/logo.png" alt="logo">
+            </a>
+            <div class="header__menu menu">
+               <nav class="menu__body">
+                  <ul class="menu__list">
+                     <li class="menu__item"><a href="about Us.html" class="menu__link">О фонде</a></li>
+                     <li class="menu__item"><a href="philanthropists.html" class="menu__link">Благотворители</a></li>
+                     <li class="menu__item"><a href="projects.html" class="menu__link">Проекты</a></li>
+                     <li class="menu__item"><a href="news.html" class="menu__link">Новости</a></li>
+                     <li class="menu__item"><a href="contacts.html" class="menu__link">Контакты и реквизиты</a></li>
+                  </ul>
+               </nav>
+            </div>
+            <a class="header__button button button-blue" href="donate.html">Сделать вклад</a>
+            <button type="button" class="menu__icon icon-menu"><span></span></button>
+         </div>
+      </header>
+      <main class="page">
+         <section class="hero-main">
+            <div class="hero-main__container">
+               <div class="hero-main__content">
+                  <h1 class="hero-main__title hero-title">
+                     СДЕЛАТЬ ВКЛАД
+                     <span>В ЭНДАУМЕНТ-ФОНД</span>
+                  </h1>
+               </div>
+            </div>
+         </section>
+         <section class="donate-block">
+            <div class="donate-block__contain">
+               <div data-tabs class="donate-tabs tabs">
+                  <nav data-tabs-titles class="donate-tabs__navigation tabs__navigation donate-page-navigation">
+                     <button type="button" class="donate-tabs__title tabs__title _tab-active">
+                        С помощью
+                        банковской карты
+                     </button>
+                     <button type="button" class="donate-tabs__title tabs__title">
+                        Через SMS
+                        на короткий номер
+                     </button>
+                     <button type="button" class="donate-tabs__title tabs__title">
+                        Через договор пожертвования
+                        или банковские реквизиты
+                     </button>
+                  </nav>
+                  <div data-tabs-body class="donate-tabs__content tabs__content">
+                     <div class="donate-tabs__body tabs__body">
+                        <div class="donate-form">
+                           <div class="form-left">
+                              <div class="form-left__content">
+                                 <div class="form-left-progress donate-progress">
+                                    <div class="form-left-progress__body donate-progress__body">
+                                       <h3 class="form-left-progress__title donate-progress__title">База отдыха «Металлург» в Пицунде</h3>
+                                       <div class="form-left-progress__content donate-progress__content">
+                                          <div class="progressline">
+                                             <div class="progressbar__line">
+                                                <div class="progressbar__progressbar-fill"></div>
+                                             </div>
+                                             <div class="progressline__collection">
+                                                <div class="progressline__start">
+                                                   <div class="progressline__description">Выделено:</div>
+                                                   <div class="progressline__sum"">7 850 000 Руб.
+                                                   </div>
+                                                </div>
+                                                <div class="progressline__target">
+                                                   <div class="progressline__description">Необходимо:</div>
+                                                   <div class="progressline__sum">10 000 000 Руб.</div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="donation-form-sum">
+                                    <label for="donation-amount" class="donation-form-sum__label">Введите размер Вашей помощи:</label>
+                                    <form id="donationAmountForm" class="donation-form-sum__field">
+                                       <input id="donation-amount" autocomplete="off" type="text" name="donationAmount" data-error="Ошибка"
+                                          placeholder="Введите сумму" class="donation-form-sum__input input donate-input _req">
+                                       <span class="donation-form-sum__currency">Руб.</span>
+                                    </form>
+                                    <div class="donation-form-sum__options">
+                                       <button class="donation-form-sum__btn" data-amount="300">300</button>
+                                       <button class="donation-form-sum__btn" data-amount="500">500</button>
+                                       <button class="donation-form-sum__btn" data-amount="1000">1000</button>
+                                       <button class="donation-form-sum__btn" data-amount="3000">3000</button>
+                                       <button class="donation-form-sum__btn" data-amount="10000">10000</button>
+                                    </div>
+                                    <div class="donation-form-sum__frequency">
+                                       <label>
+                                          <input type="radio" name="frequency" checked />
+                                          <span>В месяц</span>
+                                       </label>
+                                       <label>
+                                          <input type="radio" name="frequency" />
+                                          <span>Разовая</span>
+                                       </label>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="form-right">
+                              <form id="donationForm" action="#" class="form-right__body">
+                                 <div class="form-right__items">
+                                    <div class="form-right__item">
+                                       <input autocomplete="off" type="text" name="firstName" data-error="Ошибка" placeholder="Ваше имя" class="form-right__input input donate-input _req">
+                                       <input autocomplete="off" type="text" name="lastName" data-error="Ошибка" placeholder="Фамилия" class="form-right__input input donate-input _req">
+                                       <input autocomplete="off" type="email" name="email" data-error="Ошибка" placeholder="Email (для авторизации на сайте)" class="form-right__input input _req">
+                                       <div class="form-right-agreement">
+                                          <input id="formAgreement" type="checkbox" name="agreement" class="form-right-agreement__input">
+                                          <label for="formAgreement" class="form-right-agreement__label form-right-agreement__student"><span>Я студент НИТУ МИСиС</span></label>
+                                       </div>
+                                    </div>
+                                    <div class="form-right__item">
+                                       <input autocomplete="off" type="number" name="graduationYear" data-error="Ошибка" min="1950" max="2030" placeholder="Год выпуска" class="form-right__input input donate-input _req">
+                                       <input autocomplete="off" type="text" name="faculty" data-error="Ошибка" placeholder="Институт (факультет)" class="form-right__input input donate-input _req">
+                                       <input autocomplete="off" type="text" name="speciality" data-error="Ошибка" placeholder="Специальность" class="form-right__input input donate-input _req">
+                                       <div class="form-right-agreement">
+                                          <input id="formAgreement_1" type="checkbox" name="agreementPayment" class="form-right-agreement__input _req">
+                                          <label for="formAgreement_1" class="form-right-agreement__label form-right-agreement__conditions"><span>Я согласен(а) с <a href="#">условями оплаты</a> и <a href="#">офертой</a></span></label>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <button type="submit" class="form-right__button button button-blue">Сделать вклад</button>
+                              </form>
+                              <div id="notification-container"></div>
+                           </div>
+                        </div>
+                        <div class="payment-terms">
+                           <div class="payment-terms__body">
+                              <div class="payment-terms-item">
+                                 <div class="payment-terms-item__content">
+                                    <h2 class="payment-terms-item__title main-title">Об условиях оплаты</h2>
+                                    <div class="payment-terms-item__description">
+                                       <p>
+                                          При оплате данные Вашей пластиковой карты вводятся на платежной странице Банка
+                                          с использованием защищенного
+                                          канала.
+                                          Информация передаётся в зашифрованном виде и обрабатывается только на
+                                          специализированном сервере банка.
+                                          Безопасность
+                                          платежей обеспечивается с помощью Банка-эквайера, функционирующего на основе
+                                          современных протоколов и технологий,
+                                          разработанных международными платежными системами Visa International и
+                                          MasterCard Worldwide (3D-Secure: Verified
+                                          by
+                                          VISA, MasterCard SecureCode), а также НСПК Мир (Mir Access). Обработка
+                                          полученных конфиденциальных данных
+                                          Держателя карты производится в процессинговом центре Банка-эквайера,
+                                          сертифицированного по стандарту PCI DSS.
+                                          Безопасность передаваемой информации обеспечивается с помощью современных
+                                          протоколов обеспечения безопасности в
+                                          сети Интернет.
+                                       </p>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="payment-terms-item">
+                                 <div class="payment-terms-item__content">
+                                    <h2 class="payment-terms-item__title main-title">Порядок выставления претензий</h2>
+                                    <div class="payment-terms-item__description">
+                                       <p>
+                                          В случае совершения ошибочной финансовой транзакции (некорректно набранных
+                                          данных) плательщик может произвести
+                                          возврат денежных средств. Необходимо отправить на почту ef@misis.ru следующую
+                                          информацию: дата, сумма, ФИО
+                                          благотворителя, прчиина возврата.
+                                       </p>
+                                    </div>
+                                 </div>
+                                 <div class="payment-terms-item__disclaimer">
+                                    <span>Важно:</span> при оплате банковской картой возврат происходит аналогично
+                                    безналичным способом на тот же карточный счет, с происходила оплата.
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="donate-tabs__body tabs__body">
+                        <div class="sms-donate">
+                           <div class="sms-donate__body">
+                              <div class="sms-donate-operators">
+                                 <div class="sms-donate-operators__item">
+                                    <img src="../img/donate/megafon.jpg" alt="img">
+                                 </div>
+                                 <div class="sms-donate-operators__item">
+                                    <img src="../img/donate/beeline.jpg" alt="img">
+                                 </div>
+                                 <div class="sms-donate-operators__item">
+                                    <img src="../img/donate/mts.jpg" alt="img">
+                                 </div>
+                                 <div class="sms-donate-operators__item">
+                                    <img src="../img/donate/tele2.jpg" alt="img">
+                                 </div>
+                              </div>
+                              <div class="sms-donate__content">
+                                 <div class="sms-donate__smscode">
+                                    <h3 class="sms-donate__title">СМС на короткий номер</h3>
+                                    <div class="sms-donate__number">
+                                       <img src="../img/donate/sms-icon.png" alt="icon">
+                                       <span>3434</span>
+                                    </div>
+                                 </div>
+                                 <div class="sms-donate__description">
+                                    Отправьте SMS со словом <span class="sms-donate__description_red">«misis»</span>
+                                    пробел
+                                    <span class="sms-donate__description_bold">СУММА ПОЖЕРТВОВАНИЯ*</span> (цифрами**)
+                                    на короткий номер <span class="sms-donate__description_bold">3434</span>.
+                                 </div>
+                                 <div class="sms-donate__rules">
+                                    <p>
+                                       * Допустимый размер пожертвования от 10 до 15 000 рублей. Комиссия с абонента -
+                                       0%.
+                                    </p>
+                                    <p>
+                                       ** В случае если число будет указано прописью или сообщение будет содержать
+                                       только текст, суммой пожертвования
+                                       будет
+                                       автоматически считаться 100 рублей.
+                                    </p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="donate-tabs__body tabs__body">
+                        <div class="donationagreement contracts">
+                           <div class="donationagreement__contain contracts__сontain">
+                              <div class="donationagreement__blocks contracts__blocks">
+                                 <div class="donationagreement-block contracts-block">
+                                    <div class="donationagreement-block__items contracts-block__items">
+                                       <div class="donationagreement-block-item contracts-block-item">
+                                          <div class="donationagreement-block-item__left contracts-block-item__left">
+                                             <div class="donationagreement-block-item__icon contracts-block-item__icon">
+                                                <img src="../img/tabs/doc-icon.png" alt="icon">
+                                             </div>
+                                             <div class="donationagreement-block-item__name contracts-block-item__name">
+                                                Договор пожертвования
+                                             </div>
+                                          </div>
+                                          <div class="donationagreement-block-item__right contracts-block-item__right">
+                                             <div
+                                                class="donationagreement-block-infofile contracts-block-item-infofile">
+                                                <div
+                                                   class="donationagreement-block-infofile__format contracts-block-item-infofile__format">
+                                                   *.docx
+                                                </div>
+                                                <div
+                                                   class="donationagreement-block-infofile__size contracts-block-item-infofile__size">
+                                                   12.57 мб
+                                                </div>
+                                             </div>
+                                             <a href="#"
+                                                class="donationagreement-block-item__download contracts-block-item__download">
+                                                <img src="../img/tabs/dowload-icon.png" alt="icon">
+                                                <span>Скачать</span>
+                                             </a>
+                                          </div>
+                                       </div>
+                                       <div class="donationagreement-block-item contracts-block-item">
+                                          <div class="donationagreement-block-item__left contracts-block-item__left">
+                                             <div class="donationagreement-block-item__icon contracts-block-item__icon">
+                                                <img src="../img/tabs/doc-icon.png" alt="icon">
+                                             </div>
+                                             <div class="donationagreement-block-item__name contracts-block-item__name">
+                                                Договор пожертвования
+                                             </div>
+                                          </div>
+                                          <div class="donationagreement-block__right contracts-block-item__right">
+                                             <div
+                                                class="donationagreement-block-infofile contracts-block-item-infofile">
+                                                <div
+                                                   class="donationagreement-block-infofile__format contracts-block-item-infofile__format">
+                                                   *.docx
+                                                </div>
+                                                <div
+                                                   class="donationagreement-block-infofile__size contracts-block-item-infofile__size">
+                                                   12.57 мб
+                                                </div>
+                                             </div>
+                                             <a href="#"
+                                                class="donationagreement-block-item__download contracts-block-item__download">
+                                                <img src="../img/tabs/dowload-icon.png" alt="icon">
+                                                <span>Скачать</span>
+                                             </a>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+      </main>
+      <footer class="footer">
+         <div class="footer__container">
+            <div class="footer__content">
+               <div class="footer__logos">
+                  <a href="../index.html" class="footer__logo">
+                     <img src="../img/common/logo.png" alt="logo">
+                  </a>
+                  <div class="footer__logo">
+                     <img src="../img/common/logo_small.png" alt="logo">
+                  </div>
+               </div>
+               <div class="footer__items">
+                  <div class="footer-item">
+                     <div class="footer-item__head">Адрес</div>
+                     <div class="footer-item__content">
+                        <div class="footer-item__text">
+                           <p>119049, г. Москва,</p>
+                           <p>Ленинский проспект, д.4, оф. 716</p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="footer-item">
+                     <div class="footer-item__head">Реквизиты</div>
+                     <div class="footer-item__content">
+                        <div class="footer-item__text">
+                           <p>ИНН 7706415024</p>
+                           <p>КПП 770601001</p>
+                           <p>
+                              р/с 40703810400000000293
+                              в ТКБ БАНК ПАО г. Москва,
+                              к/с 30101810800000000388
+                              БИК 044525388
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="footer-item">
+                     <div class="footer-item__head">Контакты</div>
+                     <div class="footer-item__content">
+                        <a href="tel:74959550180" class="footer-item__phone">+ 7 495 955 01 80</a>
+                        <a href="mailto:ef@misis.ru" class="footer-item__mail">ef@misis.ru</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+   </div>
+   <script src="../js/script.js"></script>
+</body>
+</html>

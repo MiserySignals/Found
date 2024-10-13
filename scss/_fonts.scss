@@ -1,0 +1,18 @@
+@mixin font($font_name, $file_name, $weight, $style) {
+   @font-face {
+      font-family: $font_name;
+      font-display: swap;
+      src: url("../fonts/#{$file_name}.woff2") format("woff2"),
+      url("../fonts/#{$file_name}.woff") format("woff");
+      font-weight: #{$weight};
+      font-style: #{$style};
+   }
+}
+
+@include font("TTNorms", "TTNorms-Bold", 400, normal);
+@include font("TTNorms", "TTNorms-ExtraBold", 800, normal);
+@include font("TTNorms", "TTNorms-Medium", 500, normal);
+@include font("TTNorms", "TTNorms-Regular", normal, normal);
+
+@include font("Webnar", "Webnar-Regular", normal, normal);
+@include font("Webnar", "Webnar-SemiBold", 600, normal);
