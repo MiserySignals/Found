@@ -25,8 +25,6 @@
       background-color: $darkBlue;
    }
 
-   &__container {}
-
    &__content {
       position: relative;
       z-index: 50;
@@ -42,35 +40,20 @@
          background-color: $decorColor;
       }
    }
-
-   &__title {}
 }
 // ===========================================================================================
 // ===========================================================================================
-.info {
-   &__container {}
-}
-
 .info-tabs {
 
    &__navigation {
       grid-template-columns: repeat(4, 1fr);
    }
-
-   &__title {}
-
-   &__content {}
-
-   &__body {}
 }
 
 .history-tab {
    @include adaptiveValue("padding-left", 403, 15);
    &__content {
       @include adaptiveValue("padding-top", 89, 30);
-   }
-
-   &__body {
    }
 
    &__title {
@@ -107,9 +90,6 @@
          @include adaptiveValue("font-size", 20, 18);
       }
    }
-
-   &__img {
-   }
 }
 // ===========================================================================================
 // ===========================================================================================
@@ -122,9 +102,6 @@
       padding: 0px 15px;
       margin: 0 auto;
    }
-         
-   &__content {}
-
    &__title {
       @include adaptiveValue("margin-bottom", 50, 25);
    }
@@ -153,10 +130,6 @@
             display: none;
          }
       }
-   }
-
-   &__inner {
-
    }
 
    &__circle {
@@ -222,8 +195,6 @@
       left: 50%;
       transform: translate(-50%, -50%);
    }
-
-   &__content {}
 
    &__title {
       @include adaptiveValue("font-size", 24, 22);
@@ -340,8 +311,6 @@
       margin: 0 auto;
    }
 
-   &__content {}
-
    &__title {
       @include adaptiveValue("margin-bottom", 50, 25);
    }
@@ -367,8 +336,6 @@
       left: 0;
       background-color: $decorColor;
    }
-
-   &__icon {}
 
    &__text {
       max-width: 917px;
@@ -578,7 +545,6 @@
 // ===========================================================================================
 .company-contacts {
    @include adaptiveValue("padding-bottom", 190, 50);
-   &__content {}
 
    &__top {
       @include adaptiveValue("margin-bottom", 47, 20);
@@ -625,9 +591,7 @@
       height: 54px;
       border: 1px solid $blueColor;
       flex: 0 0 54px;
-      img {
-      }
-      
+      img {}
    }
 
    &__content {
@@ -639,10 +603,6 @@
    &__address {
       max-width: 316px;
    }
-
-   &__pnohe {}
-
-   &__mail {}
 }
 // ===========================================================================================
 // ===========================================================================================
@@ -652,43 +612,11 @@
    &__contain {
       padding: 0px 15px;
    }
-
-   &__blocks {}
-}
-
-.financialplan-block {
-
-   &__title {}
-
-   &__items {}
-}
-
-.financialplan-block-item {
-
-   &__left {}
-
-   &__icon {}
-
-   &__name {}
-
-   &__right {}
-
-   &__download {}
-}
-
-.financialplan-block-infofile {
-
-   &__format {}
-
-   &__size {}
 }
 // =====================================Projects======================================================
 // =====================================Projects======================================================
 // =====================================Projects======================================================
 .projects {
-   &__contain {
-
-   }
 
    &__body {
       display: flex;
@@ -741,36 +669,17 @@
    }
 }
 .projects-tabs {
-
-   @include adaptiveValue("padding-bottom", 250, 50);
-   &__container {}
-
-   &__navigation {}
-
-   &__title {}
-
+   @include adaptiveValue("padding-bottom", 100, 50);
    &__content {
       @include adaptiveValue("padding-top", 100, 50);
    }
-
-   &__body {}
-}
-
-.direction-item {
-
-   &__top {}
-
-   &__icon {}
-
-   &__number {}
-
-   &__description {}
 }
 
 .projects-card {
+   display: flex;
+   flex-direction: column;
    &__img {
-      display: flex;
-      @include adaptiveValue("margin-bottom", 30, 20);
+      @include adaptiveValue("margin-bottom", 20, 10);
       img {
          max-width: 100%;
          object-fit: cover;
@@ -782,7 +691,6 @@
    &__titleblock {
       display: flex;
       gap: 10px;
-      flex: 0 1 100%;
    }
 
    &__icon {
@@ -791,6 +699,7 @@
 
    &__body {
       display: flex;
+      flex: 1 1 100%;
       flex-direction: column;
       @include adaptiveValue("gap", 30, 20);
    }
@@ -799,7 +708,7 @@
       display: flex;
       flex: 1 1 100%;
       flex-direction: column;
-      padding: 20px 0px;
+      padding: 10px 0px;
       position: relative;
       &::before,
       &::after{
@@ -820,20 +729,16 @@
       }
    }
 
-   &__progressline {
-      display: flex;
-   }
-
    &__title {
-      flex: 1 0 100%;
       @include adaptiveValue("font-size", 20, 18);
       font-weight: 700;
+      display: flex;
+      flex: 1 1 100%;
       line-height: 23.6px;
-      @include adaptiveValue("margin-bottom", 25, 20);
+      @include adaptiveValue("margin-bottom", 15, 10);
    }
 
    &__button {
-      flex: 1 1 100%;
       color: $blueColor !important;
       background-color: inherit;
       padding: 16px 40px;
@@ -858,21 +763,15 @@
 }
 
 .currentprojects-tabs {
-
    &__navigation {
       grid-template-columns: repeat(4, 1fr)
    }
-
-   &__title {}
 }
 
 // ===========================================================================================
 // ===========================================================================================
 .cases-donate {
    @include adaptiveValue("padding-left", 300, 15);
-   &__content {}
-
-   &__body {}
 
    &__title {
       @include adaptiveValue("margin-bottom", 40, 30);
@@ -881,8 +780,6 @@
    &__text {
       max-width: 739px;
    }
-
-   &__img {}
 }
 
 .donate-progress {
@@ -892,7 +789,6 @@
    @media (max-width:$mobile){
       padding: 10px;
    }
-   &__body {}
 
    &__title {
       @include adaptiveValue("font-size", 24, 20);
@@ -900,13 +796,11 @@
       line-height: 28.32px;
       @include adaptiveValue("margin-bottom", 30, 20);
    }
-
-   &__content {}
 }
 // ===========================================================================================
 // ===========================================================================================
 .donate-block {
-   @include adaptiveValue("padding-bottom", 200, 50);
+   @include adaptiveValue("padding-bottom", 150, 50);
    &__contain {
       max-width: 1030px;
       margin: 0 auto;
@@ -920,8 +814,6 @@
 
 .donate-tabs {
 
-   &__contain {}
-
    &__navigation {
       grid-template-columns: repeat(3, 1fr);
    }
@@ -929,10 +821,6 @@
    &__title {
       text-align: left;
    }
-
-   &__content {}
-
-   &__body {}
 }
 
 // ===========================================================================================
@@ -1066,48 +954,7 @@
 }
 // ===========================================================================================
 // ===========================================================================================
-.donationagreement {
-
-   &__contain {}
-
-   &__blocks {}
-}
-
-
-.donationagreement-block {
-
-   &__items {}
-
-   &__right {}
-}
-
-.donationagreement-block-item {
-
-   &__left {}
-
-   &__icon {}
-
-   &__name {}
-
-   &__right {}
-
-   &__download {}
-}
-
-.donationagreement-block-infofile {
-
-   &__format {}
-
-   &__size {}
-}
-
 .donate-tabs {
-   &__navigation {}
-
-   &__title {}
-
-   &__content {}
-
    &__body {
       @include adaptiveValue("padding-top", 50, 30);
    }
@@ -1251,11 +1098,6 @@
       bottom: 0;
       left: 0;
    }
-   &__body {}
-
-   &__title {}
-
-   &__content {}
 }
 
 /*Правая сторона формы*/
@@ -1293,11 +1135,8 @@
 
    &__input {
       width: 100%;
-      input {
-      }
+      input {}
    }
-
-   &__button {}
 
    &__banks {
       display: flex;
@@ -1309,10 +1148,6 @@
       }
       @media (max-width:$mobile){
       }
-   }
-
-   &__bank {
-      
    }
 }
 
@@ -1384,8 +1219,6 @@
    display: flex;
    flex-direction: column;
    gap: 16px;
-   &__content {
-   }
 
    &__title {
       color: rgba(152, 163, 173, 1) !important;
@@ -1415,9 +1248,6 @@
 .news-page {
    @include adaptiveValue("padding-top", 100, 50);
    @include adaptiveValue("padding-bottom", 200, 50);
-   &__container {}
-
-   &__content {}
 
    &__title {
       @include adaptiveValue("margin-bottom", 50, 30);
@@ -1497,8 +1327,6 @@
       @include adaptiveValue("font-size", 21, 18);
       color: rgba(226, 234, 238, 1);
    }
-
-   &__next {}
 }
 // ===========================================================================================
 // ===========================================================================================
@@ -1509,8 +1337,6 @@
    justify-content:center;align-items: center;
    @media (max-width:$mobile){
       display: block;
-   }
-   &__container {
    }
 
    &__title {
@@ -1572,12 +1398,6 @@
       line-height: 30px;
    }
 
-   &__description {}
-
-   &__phone {}
-
-   &__mail {}
-
    &__text {
       max-width: 488px;
    }
@@ -1592,10 +1412,6 @@
       border-left: 0px;
       padding-left: 0px;
    }
-   &__item {}
-
-   &__body {}
-
    &__name {
       @include adaptiveValue("font-size", 20, 18);
       font-weight: 500;
@@ -1616,8 +1432,6 @@
 .company-slider {
    @include adaptiveValue("padding-top", 100, 50);
    @include adaptiveValue("padding-bottom", 100, 50);
-   &__wrapper {}
-
    &__content {
       position: relative;
    }
@@ -1633,8 +1447,6 @@
       display: flex;
       justify-content: space-between;
    }
-
-   &__title {}
 
    &__pagination {
       .company-swiper-pagination-bullet {
@@ -1745,7 +1557,6 @@
 // ===========================================================================================
 .philanthropists-slider {
    @include adaptiveValue("padding-bottom", 200, 50);
-   &__wrapper {}
 
    &__slide {
       .management {
@@ -1753,28 +1564,8 @@
       }
    }
 }
-
-.philanthropists-management {
-   &__title {}
-}
-
-.philanthropists-control {
-
-   &__content {}
-
-   &__pagination {}
-
-   &__prev {}
-
-   &__next {}
-}
 // ===========================================================================================
 // ===========================================================================================
-.projects {
-
-   &__howtoinvest {}
-}
-
 .how-to-invest {
 
    &__container {
@@ -1951,8 +1742,6 @@
    background: url("../img/results/mask_1.png") center / cover no-repeat;
    @media (max-width:$tablet){
       display: none;
-   }
-   &__img {
    }
 }
 // ===========================================================================================

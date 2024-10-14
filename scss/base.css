@@ -283,9 +283,11 @@ body {
   left: 0;
   background-color: #E2EAEE;
 }
+
 .info-tabs__navigation {
   grid-template-columns: repeat(4, 1fr);
 }
+
 @media (min-width: 90.625em) {
   .history-tab {
     padding-left: 25.1875rem;
@@ -464,6 +466,7 @@ body {
     font-size: 1.125rem;
   }
 }
+
 @media (min-width: 90.625em) {
   .process {
     padding-top: 6.25rem;
@@ -1888,6 +1891,7 @@ body {
 .company-contacts-item__address {
   max-width: 316px;
 }
+
 @media (min-width: 90.625em) {
   .financialplan {
     padding-top: 6.25rem;
@@ -1935,6 +1939,7 @@ body {
 .financialplan__contain {
   padding: 0px 15px;
 }
+
 .projects__body {
   display: flex;
   flex-direction: column;
@@ -2146,18 +2151,18 @@ body {
 
 @media (min-width: 90.625em) {
   .projects-tabs {
-    padding-bottom: 15.625rem;
+    padding-bottom: 6.25rem;
   }
 }
 @media (min-width: 20em) and (max-width: 90.625em) {
-  @supports (padding-bottom: clamp( 3.125rem , -0.4148230088rem  +  17.6991150442vw , 15.625rem )) {
+  @supports (padding-bottom: clamp( 3.125rem , 2.2400442478rem  +  4.4247787611vw , 6.25rem )) {
     .projects-tabs {
-      padding-bottom: clamp( 3.125rem , -0.4148230088rem  +  17.6991150442vw , 15.625rem );
+      padding-bottom: clamp( 3.125rem , 2.2400442478rem  +  4.4247787611vw , 6.25rem );
     }
   }
-  @supports not (padding-bottom: clamp( 3.125rem , -0.4148230088rem  +  17.6991150442vw , 15.625rem )) {
+  @supports not (padding-bottom: clamp( 3.125rem , 2.2400442478rem  +  4.4247787611vw , 6.25rem )) {
     .projects-tabs {
-      padding-bottom: calc(3.125rem + 12.5 * (100vw - 20rem) / 70.625);
+      padding-bottom: calc(3.125rem + 3.125 * (100vw - 20rem) / 70.625);
     }
   }
 }
@@ -2188,29 +2193,31 @@ body {
     padding-top: 3.125rem;
   }
 }
-.projects-card__img {
+
+.projects-card {
   display: flex;
+  flex-direction: column;
 }
 @media (min-width: 90.625em) {
   .projects-card__img {
-    margin-bottom: 1.875rem;
+    margin-bottom: 1.25rem;
   }
 }
 @media (min-width: 20em) and (max-width: 90.625em) {
-  @supports (margin-bottom: clamp( 1.25rem , 1.0730088496rem  +  0.8849557522vw , 1.875rem )) {
+  @supports (margin-bottom: clamp( 0.625rem , 0.4480088496rem  +  0.8849557522vw , 1.25rem )) {
     .projects-card__img {
-      margin-bottom: clamp( 1.25rem , 1.0730088496rem  +  0.8849557522vw , 1.875rem );
+      margin-bottom: clamp( 0.625rem , 0.4480088496rem  +  0.8849557522vw , 1.25rem );
     }
   }
-  @supports not (margin-bottom: clamp( 1.25rem , 1.0730088496rem  +  0.8849557522vw , 1.875rem )) {
+  @supports not (margin-bottom: clamp( 0.625rem , 0.4480088496rem  +  0.8849557522vw , 1.25rem )) {
     .projects-card__img {
-      margin-bottom: calc(1.25rem + 0.625 * (100vw - 20rem) / 70.625);
+      margin-bottom: calc(0.625rem + 0.625 * (100vw - 20rem) / 70.625);
     }
   }
 }
 @media (max-width: 20em) {
   .projects-card__img {
-    margin-bottom: 1.25rem;
+    margin-bottom: 0.625rem;
   }
 }
 .projects-card__img img {
@@ -2223,13 +2230,13 @@ body {
 .projects-card__titleblock {
   display: flex;
   gap: 10px;
-  flex: 0 1 100%;
 }
 .projects-card__icon {
   padding-top: 3px;
 }
 .projects-card__body {
   display: flex;
+  flex: 1 1 100%;
   flex-direction: column;
 }
 @media (min-width: 90.625em) {
@@ -2258,7 +2265,7 @@ body {
   display: flex;
   flex: 1 1 100%;
   flex-direction: column;
-  padding: 20px 0px;
+  padding: 10px 0px;
   position: relative;
 }
 .projects-card__content::before, .projects-card__content::after {
@@ -2277,12 +2284,10 @@ body {
   content: "";
   bottom: 0;
 }
-.projects-card__progressline {
-  display: flex;
-}
 .projects-card__title {
-  flex: 1 0 100%;
   font-weight: 700;
+  display: flex;
+  flex: 1 1 100%;
   line-height: 23.6px;
 }
 @media (min-width: 90.625em) {
@@ -2309,28 +2314,27 @@ body {
 }
 @media (min-width: 90.625em) {
   .projects-card__title {
-    margin-bottom: 1.5625rem;
+    margin-bottom: 0.9375rem;
   }
 }
 @media (min-width: 20em) and (max-width: 90.625em) {
-  @supports (margin-bottom: clamp( 1.25rem , 1.1615044248rem  +  0.4424778761vw , 1.5625rem )) {
+  @supports (margin-bottom: clamp( 0.625rem , 0.5365044248rem  +  0.4424778761vw , 0.9375rem )) {
     .projects-card__title {
-      margin-bottom: clamp( 1.25rem , 1.1615044248rem  +  0.4424778761vw , 1.5625rem );
+      margin-bottom: clamp( 0.625rem , 0.5365044248rem  +  0.4424778761vw , 0.9375rem );
     }
   }
-  @supports not (margin-bottom: clamp( 1.25rem , 1.1615044248rem  +  0.4424778761vw , 1.5625rem )) {
+  @supports not (margin-bottom: clamp( 0.625rem , 0.5365044248rem  +  0.4424778761vw , 0.9375rem )) {
     .projects-card__title {
-      margin-bottom: calc(1.25rem + 0.3125 * (100vw - 20rem) / 70.625);
+      margin-bottom: calc(0.625rem + 0.3125 * (100vw - 20rem) / 70.625);
     }
   }
 }
 @media (max-width: 20em) {
   .projects-card__title {
-    margin-bottom: 1.25rem;
+    margin-bottom: 0.625rem;
   }
 }
 .projects-card__button {
-  flex: 1 1 100%;
   color: #00A7D8 !important;
   background-color: inherit;
   padding: 16px 40px;
@@ -2355,6 +2359,7 @@ body {
 .currentprojects-tabs__navigation {
   grid-template-columns: repeat(4, 1fr);
 }
+
 @media (min-width: 90.625em) {
   .cases-donate {
     padding-left: 18.75rem;
@@ -2402,6 +2407,7 @@ body {
 .cases-donate__text {
   max-width: 739px;
 }
+
 .donate-progress {
   padding: 30px 40px;
   border: 1px solid #E2EAEE;
@@ -2481,20 +2487,21 @@ body {
     margin-bottom: 1.25rem;
   }
 }
+
 @media (min-width: 90.625em) {
   .donate-block {
-    padding-bottom: 12.5rem;
+    padding-bottom: 9.375rem;
   }
 }
 @media (min-width: 20em) and (max-width: 90.625em) {
-  @supports (padding-bottom: clamp( 3.125rem , 0.4701327434rem  +  13.2743362832vw , 12.5rem )) {
+  @supports (padding-bottom: clamp( 3.125rem , 1.3550884956rem  +  8.8495575221vw , 9.375rem )) {
     .donate-block {
-      padding-bottom: clamp( 3.125rem , 0.4701327434rem  +  13.2743362832vw , 12.5rem );
+      padding-bottom: clamp( 3.125rem , 1.3550884956rem  +  8.8495575221vw , 9.375rem );
     }
   }
-  @supports not (padding-bottom: clamp( 3.125rem , 0.4701327434rem  +  13.2743362832vw , 12.5rem )) {
+  @supports not (padding-bottom: clamp( 3.125rem , 1.3550884956rem  +  8.8495575221vw , 9.375rem )) {
     .donate-block {
-      padding-bottom: calc(3.125rem + 9.375 * (100vw - 20rem) / 70.625);
+      padding-bottom: calc(3.125rem + 6.25 * (100vw - 20rem) / 70.625);
     }
   }
 }
@@ -2518,6 +2525,7 @@ body {
 .donate-tabs__title {
   text-align: left;
 }
+
 .sms-donate {
   border: 1px solid #E2EAEE;
 }
@@ -3141,6 +3149,7 @@ body {
   bottom: 0;
   left: 0;
 }
+
 /*Правая сторона формы*/
 .form-right {
   border-left: 1px solid #E2EAEE;
@@ -3675,6 +3684,7 @@ body {
     font-size: 1.125rem;
   }
 }
+
 .contacts {
   display: flex;
   justify-content: center;
@@ -4586,6 +4596,7 @@ body {
     display: none;
   }
 }
+
 .button {
   font-family: TTNorms;
   font-weight: 700;
@@ -4855,7 +4866,7 @@ body {
 }
 @media (max-width: 500px) {
   .tabs__navigation {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(1, 1fr);
     margin-bottom: 10px;
     gap: 25px;
   }
@@ -4957,9 +4968,14 @@ body {
 }
 @media (max-width: 29.99875em) {
   .tabs__title {
-    width: 150px;
+    width: -moz-fit-content;
+    width: fit-content;
+    overflow: auto;
+    text-overflow: clip;
+    white-space: wrap;
   }
 }
+
 /*--------------------------------------------------------------*/
 .padding-left {
   padding-right: 15px;
@@ -8014,7 +8030,8 @@ body {
   width: 100%;
 }
 .fund-swiper-control__body {
-  width: 50%;
+  width: -moz-fit-content;
+  width: fit-content;
   position: absolute;
   bottom: 0;
   z-index: 50;
@@ -8093,6 +8110,8 @@ body {
   display: flex;
   justify-content: stretch;
   align-items: center;
+  border-radius: 40px;
+  background-color: rgba(255, 255, 255, 0.3);
 }
 @media (min-width: 90.625em) {
   .fund-swiper-control__pagination {

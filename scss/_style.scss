@@ -819,8 +819,9 @@ body {
    }
 
    &__body {
-      width: 50%;
+      width: fit-content;
       position: absolute;
+      
       bottom: 0;
       z-index: 50;
       @include adaptiveValue("margin-bottom", 64, 1);
@@ -853,6 +854,8 @@ body {
    display: flex;
    justify-content: stretch;
    align-items: center;
+   border-radius: 40px;
+   background-color: rgba(255, 255, 255, 0.3);
    @include adaptiveValue("gap", 30, 10);
    @media (max-width:$mobile){
       display: none;

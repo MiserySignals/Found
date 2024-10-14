@@ -19,10 +19,8 @@ document.addEventListener("DOMContentLoaded", function () {
       let allocatedSumElement = block.querySelector(".progressline__start .progressline__sum");
       let targetSumElement = block.querySelector(".progressline__target .progressline__sum");
       let progressBar = block.querySelector(".progressbar__progressbar-fill");
-
       let allocatedAmount = parseInt(allocatedSumElement.innerText.replace(/\D/g, ""));
       let targetAmount = parseInt(targetSumElement.innerText.replace(/\D/g, ""));
-
       let progressPercentage = (allocatedAmount / targetAmount) * 100;
       progressBar.style.width = progressPercentage + "%";
 
@@ -37,20 +35,15 @@ let progressStartValue = 0,
    progressEndValue = 1000000000,
    currentProgressValue = 422587155,
    duration = 1000;
-
 let startTime = null;
 
 function animateProgress(timestamp) {
    if (!startTime) startTime = timestamp;
    let progress = timestamp - startTime;
-
    let currentProgress = Math.min(currentProgressValue, progressStartValue + (currentProgressValue * (progress / duration)));
    let progressPercentage = Math.round((currentProgress / progressEndValue) * 100);
-
    progressValue.innerHTML = `${Math.round(currentProgress).toLocaleString()} Р.`;
-
    circularProgress.style.background = `conic-gradient(#00A7D8 ${progressPercentage * 3.6}deg, rgba(226, 234, 238, 0.2) ${progressPercentage * 3.6}deg 360deg)`;
-
    if (progress < duration) {
       requestAnimationFrame(animateProgress);
    } else {
@@ -63,16 +56,13 @@ requestAnimationFrame(animateProgress);
 document.addEventListener('DOMContentLoaded', function () {
    const amountInput = document.getElementById('donation-amount');
    const buttons = document.querySelectorAll('.donation-form-sum__btn');
-
    function removeActiveClass() {
       buttons.forEach(btn => btn.classList.remove('donation-form-sum__btn_active'));
    }
-
    buttons.forEach(button => {
       button.addEventListener('click', function () {
          const amount = this.getAttribute('data-amount');
          amountInput.value = amount;
-
          removeActiveClass();
          this.classList.add('donation-form-sum__btn_active');
       });
@@ -100,7 +90,6 @@ document.addEventListener('DOMContentLoaded', function () {
 document.addEventListener('DOMContentLoaded', function () {
    const amountInput = document.getElementById('donation-amount');
    const buttons = document.querySelectorAll('.donation-form-sum__btn');
-
    function removeActiveClass() {
       buttons.forEach(btn => btn.classList.remove('donation-form-sum__btn_active'));
    }
@@ -117,7 +106,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
    amountInput.addEventListener('input', function () {
       const inputValue = this.value;
-
       let foundMatch = false;
       buttons.forEach(button => {
          if (button.getAttribute('data-amount') === inputValue) {
@@ -138,12 +126,46 @@ document.addEventListener('DOMContentLoaded', function () {
    const mainForm = document.getElementById('donationForm');
    const amountForm = document.getElementById('donationAmountForm');
    const donationAmountInput = document.getElementById('donation-amount');
+   const firstNameInput = document.querySelector('input[name="firstName"]');
+   const lastNameInput = document.querySelector('input[name="lastName"]');
+   const birthYearInput = document.querySelector('input[name="birthYear"]');
+   const currentYear = new Date().getFullYear();
 
    mainForm.addEventListener('submit', formSend);
 
+   // ЗАПРЕЩЕНО ПИСАТЬ НЕ ТО ЧЕ НАДО
+   donationAmountInput.addEventListener('input', function () {
+      if (this.value.length > 1 && this.value.startsWith('0')) {
+         this.value = this.value.replace(/^0+/, '');
+      }
+   });
+
+   firstNameInput.addEventListener('input', function () {
+      this.value = this.value.replace(/[0-9]/g, '');
+   });
+
+   lastNameInput.addEventListener('input', function () {
+      this.value = this.value.replace(/[0-9]/g, '');
+   });
+
+   birthYearInput.addEventListener('input', function () {
+      this.value = this.value.replace(/[^0-9]/g, '');
+   });
+
+   mainForm.addEventListener('submit', function (e) {
+      let year = parseInt(birthYearInput.value, 10);
+
+      if (year < 1950 || year > currentYear) {
+         e.preventDefault();
+         showAlert('Год рождения должен быть в диапазоне от 1950 до ' + currentYear, 'error');
+         formAddError(birthYearInput);
+      } else {
+         formRemoveError(birthYearInput);
+      }
+   });
+
    async function formSend(e) {
       e.preventDefault();
-
       let error = formValidate(mainForm);
       let formData = new FormData(mainForm);
 
@@ -181,7 +203,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
       formReq.forEach(input => {
          formRemoveError(input);
-
          if (input.getAttribute("type") === "email" && emailTest(input)) {
             formAddError(input);
             error++;
@@ -230,22 +251,17 @@ document.addEventListener('DOMContentLoaded', function () {
    function showAlert(message, type) {
       const notificationContainer = document.getElementById('notification-container');
       notificationContainer.innerHTML = '';
-
       const notification = document.createElement('div');
       notification.classList.add('notification', type);
-
       const notificationMessage = document.createElement('span');
       notificationMessage.innerText = message;
-
       const closeButton = document.createElement('button');
       closeButton.classList.add('close');
       closeButton.innerHTML = '&times;';
       closeButton.onclick = () => notificationContainer.removeChild(notification);
-
       notification.appendChild(notificationMessage);
       notification.appendChild(closeButton);
       notificationContainer.appendChild(notification);
-
       setTimeout(() => {
          if (notificationContainer.contains(notification)) {
             notificationContainer.removeChild(notification);
@@ -349,6 +365,7 @@ document.addEventListener('DOMContentLoaded', function () {
    let _slideToggle = (target, duration = 500) => {
       if (target.hidden) return _slideDown(target, duration); else return _slideUp(target, duration);
    };
+
    /*Управления состоянием блокировки прокрутки страницы*/
    let bodyLockStatus = true;
    let bodyLockToggle = (delay = 500) => {
@@ -388,7 +405,7 @@ document.addEventListener('DOMContentLoaded', function () {
          }), delay);
       }
    };
-   /*Раскрытие и скрытие спойлеро*/
+   /*Раскрытие и скрытие спойлера*/
    function spollers() {
       const spollersArray = document.querySelectorAll("[data-spollers]");
       if (spollersArray.length > 0) {
@@ -692,8 +709,8 @@ document.addEventListener('DOMContentLoaded', function () {
                behavior: "smooth"
             });
          }
-         FLS(`[gotoBlock]: Юхуу...їдемо до ${targetBlock}`);
-      } else FLS(`[gotoBlock]: Йой... Такого блоку немає на сторінці: ${targetBlock}`);
+         FLS(`[gotoBlock]: Прокрутка до: ${targetBlock}`);
+      } else FLS(`[gotoBlock]: Такого блока нет на странице: ${targetBlock}`);
    };
    /*Для инициализации полей формы с возможностью просмотра пароля и автоматической регулировки высоты текстовых полей*/
    function formFieldsInit(options = {
@@ -876,10 +893,10 @@ document.addEventListener('DOMContentLoaded', function () {
             }
          }), 0);
          formValidate.formClean(form);
-         formLogging(`Форму відправлено!`);
+         formLogging(`Форма отправлена!`);
       }
       function formLogging(message) {
-         FLS(`[Форми]: ${message}`);
+         FLS(`[Форма]: ${message}`);
       }
    }
    let addWindowScrollEvent = false;
