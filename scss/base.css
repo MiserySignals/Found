@@ -4960,19 +4960,10 @@ body {
     text-align: left;
     margin-bottom: 10px;
     display: block;
-    width: 100px;
+    width: 100%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-  }
-}
-@media (max-width: 29.99875em) {
-  .tabs__title {
-    width: -moz-fit-content;
-    width: fit-content;
-    overflow: auto;
-    text-overflow: clip;
-    white-space: wrap;
   }
 }
 
